@@ -239,13 +239,13 @@ function serializeForm(formNode) {
 В консоли после запуска мы получим вывод по каждому из полей:
 
 ```vim
-0 {name: 'name', value: 'Alex'}
-1 {name: 'email', value: 'some@mail.com'}
-2 {name: 'age', value: '24'}
-3 {name: 'specialization', value: 'engineer'}
-4 {name: 'nasaExperience', value: '1'}
-5 {name: 'photo', value: 'C:\\fakepath\\image.jpg'}
-6 {name: '', value: ''}
+1 {name: 'name', value: 'Alex'}
+2 {name: 'email', value: 'some@mail.com'}
+3 {name: 'age', value: '24'}
+4 {name: 'specialization', value: 'engineer'}
+5 {name: 'nasaExperience', value: '1'}
+6 {name: 'photo', value: 'C:\\fakepath\\image.jpg'}
+7 {name: '', value: ''}
 ```
 
 Заметим, чтобы последняя строчка не имеет ни названия, ни значения. Это потому, что последний элемент, который мы проверяли, — это кнопка.
