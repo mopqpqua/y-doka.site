@@ -188,7 +188,20 @@ applicantForm.addEventListener("submit", handleFormSubmit)
 
 Если сейчас мы вызовем эту функцию, передав туда нашу форму как аргумент, то в консоли появится список всех элементов:
 
-![Представление всех элементов формы в консоли браузера](/assets/images/posts/js/deal-with-forms/1.png)
+```js
+/*
+Console:
+
+HTMLFormControlsCollection
+  0 <input type="text" name="name" id="name" placeholder="Elon Musk" autofocus>
+  1 <input type="email" name="email" id="email" placeholder="elon@musk.com">
+  2 <input type="number" name="age">
+  3 <select name="specialization">
+  4 <input type="checkbox" name="nasaExperience" value="1">
+  5 <input type="file" accept="image/jpeg" name="photo">
+  6 <button type="submit">Apply to the mission</button>
+*/
+```
 
 Обратите внимание, что тип этого набора элементов — `HTMLFormControlsCollection`. Это не массив, нам это будет важно далее.
 
@@ -229,7 +242,17 @@ function serializeForm(formNode) {
 
 В консоли после запуска мы получим вывод по каждому из полей:
 
-![имя и значение поля в консоли браузера](/assets/images/posts/js/deal-with-forms/2.png)
+```js
+// Console:
+
+/* 1 */ {name: 'name', value: 'Alex'}
+/* 2 */ {name: 'email', value: 'some@mail.com'}
+/* 3 */ {name: 'age', value: '24'}
+/* 4 */ {name: 'specialization', value: 'engineer'}
+/* 5 */ {name: 'nasaExperience', value: '1'}
+/* 6 */ {name: 'photo', value: 'C:\\fakepath\\image.jpg'}
+/* 7 */ {name: '', value: ''}
+```
 
 Заметим, чтобы последняя строчка не имеет ни названия, ни значения. Это потому, что последний элемент, который мы проверяли, — это кнопка.
 
@@ -267,7 +290,18 @@ function serializeForm(formNode) {
 
 На выходе получится массив из объектов с `name` и `value`:
 
-![отфильтрованный список имен и значений в консоли браузера](/assets/images/posts/js/deal-with-forms/3.png)
+```js
+// Console:
+
+[
+  {name: 'name', value: 'Alex'},
+  {name: 'email', value: 'some@mail.com'},
+  {name: 'age', value: '24'},
+  {name: 'specialization', value: 'engineer'},
+  {name: 'nasaExperience', value: '1'},
+  {name: 'photo', value: 'C:\\fakepath\\image.jpg'}
+]
+```
 
 ### Значения чекбоксов
 
@@ -311,7 +345,18 @@ function serializeForm(formNode) {
 
 Теперь значение поля `nasaExperience` будет `true`, если чекбокс отмечен и `false`, если пропущен.
 
-![список имен и значний полей с исправленным поле nasaExperience](/assets/images/posts/js/deal-with-forms/4.png)
+```js
+// Console:
+
+[
+  {name: 'name', value: 'Alex'},
+  {name: 'email', value: 'some@mail.com'},
+  {name: 'age', value: '24'},
+  {name: 'specialization', value: 'engineer'},
+  {name: 'nasaExperience', value: false'},
+  {name: 'photo', value: 'C:\\fakepath\\image.jpg'}
+]
+```
 
 ### Формат данных
 
@@ -355,7 +400,28 @@ function serializeForm(formNode) {
 
 Стоит отметить, что `nasaExperience` в таком случае попадёт, лишь если чекбокс отметили. Если его не отметить, то в финальных данных он не окажется.
 
-![поведение поле nasaExperience при использовании FormData](/assets/images/posts/js/deal-with-forms/5.png)
+```js
+// Console:
+
+// Когда чекбокс nasaExperience был выделен:
+[
+  ["name", "Alex"],
+  ["email", "example@test.com"],
+  ["age", "24"],
+  ["specialization", "engineer"],
+  ["nasaExperience", "1"],
+  ["photo", File],
+]
+
+// Когда чекбокс не был выделен:
+[
+  ["name", "Alex"],
+  ["email", "example@test.com"],
+  ["age", "24"],
+  ["specialization", "engineer"],
+  ["photo", File],
+]
+```
 
 В первом случае чекбокс был отмечен, поэтому в списке есть элемент `nasaExperience`, во втором случае чекбокс был пропущен, поэтому такого элемента в списке данных нет.
 
