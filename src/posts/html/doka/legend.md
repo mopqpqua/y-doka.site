@@ -11,6 +11,7 @@ summary:
   - тэг
   - тег
   - fieldset
+  - <fieldset>
   - форма
 ---
 
