@@ -33,22 +33,22 @@ summary:
 
 ## Как пишется
 
-**Важно**, чтобы `<legend>` был первым дочерним элементом внутри `<fieldset>`.
-
-## Атрибуты
-
-У `<legend>` нет никаких «своих» атрибутов, ему доступны все *глобальные атрибуты*. Но для выравнивания текста по краю или по центру не обойтись без атрибута `align` (CSS-свойство `text-align` работать не будет, даже если задать `display: block`):
-
 ```html
 <fieldset>
-  <legend align="center">Заголовок для группы контролов</legend>
+  <legend>Заголовок для группы</legend>
   …
 </fieldset>
 ```
 
-## Подсказки
+:::callout 💡
+**Важно**, чтобы `<legend>` был первым дочерним элементом внутри `<fieldset>`. Если внутри `<fieldset>` будет больше одного `<legend>`, отобразится только первый, все остальные отобразяться как обычные блочные элементы:
 
-Внешний вид оформления рамки по умолчанию у `<legend>` немного отличается в зависимости от браузера и операционной системы:
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="Realetive" data-slug-hash="JjbRaPM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rotate legend">
+  <span>See the Pen <a href="https://codepen.io/Realetive/pen/JjbRaPM">
+  rotate legend</a> by Roman Ganin (<a href="https://codepen.io/Realetive">@Realetive</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 ## Атрибуты
 
@@ -79,52 +79,16 @@ summary:
 </table>
 
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Windows 8, Internet Explorer 10.0
-      </th>
-      <th>
-        Windows 7, Internet Explorer 9.0
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <img src="/assets/images/posts/fieldset/win8_ie_10.0.png" alt="">
-      </td>
-      <td>
-        <img src="/assets/images/posts/fieldset/win7_ie_9.0.png" alt="">
-      </td>
-    </tr>
-  </tbody>
-</table>
+## В работе
 
+Для выравнивания положения текста часто советуют использовать атрибут `align`, но он исключён из современной спецификации, а привычные CSS-правила, например, с `text-align: center` с `<legend>` работать не будут, т. к. у него блочный контекст, но уникальная инлайн-блочная контекстая модель содержимого, которая и создаёт неповторимую обводку от `<fieldset>`. Поэтому для выравнивания `<legend>` относительно ширины `<fieldset>` нужно использовать… внезапно [`margin`](/css/doka/margin)!
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Samsung Galaxy S7
-      </th>
-      <th>
-        Google Nexus 6
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <img src="/assets/images/posts/fieldset/6.0_Samsung-Galaxy-S7_portrait_real-mobile.png" alt="">
-      </td>
-      <td>
-        <img src="/assets/images/posts/fieldset/6.0_Google-Nexus-6_portrait_real-mobile.png" alt="">
-      </td>
-    </tr>
-  </tbody>
-</table>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="Realetive" data-slug-hash="PobGyGb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="legend align">
+  <span>See the Pen <a href="https://codepen.io/Realetive/pen/PobGyGb">
+  legend align</a> by Roman Ganin (<a href="https://codepen.io/Realetive">@Realetive</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 За счёт особой формы «обтекания» рамкой текста, это можно использовать для характерной стилизации блока и заголовка:
 
