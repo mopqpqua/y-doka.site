@@ -54,30 +54,44 @@ summary:
 
 У `<legend>` нет никаких «своих» атрибутов, ему доступны все [глобальные атрибуты](/html/doka/global-attrs).
 
+## Подсказки
 
-<table>
-  <thead>
-    <tr>
-      <th>
-        Windows 10, Edge 18.0
-      </th>
-      <th>
-        MacOS Big Sur, Safari 14.0
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <img src="/assets/images/posts/fieldset/win10_edge_18.0.png" alt="">
-      </td>
-      <td>
-        <img src="/assets/images/posts/fieldset/macbsr_safari_14.0.jpg" alt="">
-      </td>
-    </tr>
-  </tbody>
-</table>
+Внешний вид оформления рамки по умолчанию у `<legend>` немного отличается в зависимости от браузера и операционной системы:
 
+<section class="section section_column_2">
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/win10_chrome_71.0.png" alt="Windows 10, Google Chrome 71.0">
+    <figcaption>Windows 10, Google Chrome 71.0</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/macbsr_chrome_71.0.png" alt="MacOS Big Sur, Google Chrome 71.0">
+    <figcaption>MacOS Big Sur, Google Chrome 71.0</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/win10_edge_18.0.png" alt="Windows 10, Edge 18.0">
+    <figcaption>Windows 10, Edge 18.0</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/macbsr_safari_14.0.jpg" alt="MacOS Big Sur, Safari 14.0">
+    <figcaption>MacOS Big Sur, Safari 14.0</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/win8_ie_10.0.png" alt="Windows 8, Internet Explorer 10.0">
+    <figcaption>Windows 8, Internet Explorer 10.0</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/win7_ie_9.0.png" alt="Windows 7, Internet Explorer 9.0">
+    <figcaption>Windows 7, Internet Explorer 9.0</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/6.0_Samsung-Galaxy-S7_portrait_real-mobile.png" alt="Samsung Galaxy S7">
+    <figcaption>Samsung Galaxy S7</figcaption>
+  </figure>
+  <figure class="section__item">
+    <img src="/assets/images/posts/fieldset/6.0_Google-Nexus-6_portrait_real-mobile.png" alt="Google Nexus 6">
+    <figcaption>Google Nexus 6</figcaption>
+  </figure>
+</section>
 
 ## В работе
 
