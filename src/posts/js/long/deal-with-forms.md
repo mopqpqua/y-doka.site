@@ -188,7 +188,7 @@ applicantForm.addEventListener("submit", handleFormSubmit)
 
 Если сейчас мы вызовем эту функцию, передав туда нашу форму как аргумент, то в консоли появится список всех элементов:
 
-```vim
+```
 HTMLFormControlsCollection
   0 <input type="text" name="name" id="name" placeholder="Elon Musk" autofocus>
   1 <input type="email" name="email" id="email" placeholder="elon@musk.com">
@@ -238,7 +238,7 @@ function serializeForm(formNode) {
 
 В консоли после запуска мы получим вывод по каждому из полей:
 
-```vim
+```
 1 {name: 'name', value: 'Alex'}
 2 {name: 'email', value: 'some@mail.com'}
 3 {name: 'age', value: '24'}
