@@ -72,6 +72,7 @@ summary:
 
 :::callout 💡
 Самое удобное в использовании `<fieldset>` — возможность заблокировать __все__ вложенные контролы внутри тега одним атрибутом `disabled`:
+:::
 
 <p class="codepen" data-height="347" data-theme-id="light" data-default-tab="result" data-user="Realetive" data-slug-hash="RwGNEmp" data-preview="true" style="height: 347px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="fieldset demo">
   <span>See the Pen <a href="https://codepen.io/Realetive/pen/RwGNEmp">
