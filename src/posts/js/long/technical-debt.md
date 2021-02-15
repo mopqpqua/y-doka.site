@@ -52,8 +52,8 @@ summary:
 Короткие сроки — самое частое внешнее ограничение. Заказчиков можно понять: чем раньше появится первая версия продукта, тем больше шансов, что рынок не захватят конкуренты. Но чем дольше после старта мы забиваем на тех. долг, тем дороже будут выплаты.
 
 <figure>
-  <img src="/assets/images/posts/js/technical-debt/functionality-against-time.jpg" width="309" height="164">
-  <figcaption>Мартин Фаулер [предлагает](https://martinfowler.com/bliki/DesignStaminaHypothesis.html) использовать «кривую выплаты» (payoff line) для определения выгод и вреда технического долга</figcaption>
+  <img src="/assets/images/posts/js/technical-debt/functionality-against-time.png" width="618" height="319">
+  <figcaption>Мартин Фаулер <a href="https://martinfowler.com/bliki/DesignStaminaHypothesis.html">предлагает</a> использовать «кривую выплаты» (payoff line) для определения выгод и вреда технического долга</figcaption>
 </figure>
 
 [Есть мнение](http://dopo.st/inem/200530110137), что хороший компромисс для бизнеса и разработки — начать заниматься долговыми задачами сразу после запуска проекта.
@@ -157,12 +157,12 @@ summary:
 Лучше всего принимать решение исходя из кривой выплат и квадранта [технического долга](https://martinfowler.com/bliki/TechnicalDebtQuadrant.html):
 
 <figure>
-  <img src="/assets/images/posts/js/technical-debt/functionality-against-time.jpg" width="309" height="164">
+  <img src="/assets/images/posts/js/technical-debt/functionality-against-time.png" width="618" height="319">
   <figcaption>Кривая выплат помогает понять, какую вы получим выгоду и вред</figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/posts/js/technical-debt/tech-debt-quadrant.jpg" width="256" height="192">
+  <img src="/assets/images/posts/js/technical-debt/tech-debt-quadrant.png" width="512" height="384">
   <figcaption>А квадрант подскажет, в каком состоянии мы принимаем решение</figcaption>
 </figure>
 
