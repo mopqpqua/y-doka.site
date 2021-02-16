@@ -2,9 +2,8 @@
 title: "API. Что это и зачем нужно?"
 name: api
 author: bespoyasov
-co-authors:
-designers:
 contributors:
+  - furtivite
 tags:
   - sprint-10
   - sprint-12
