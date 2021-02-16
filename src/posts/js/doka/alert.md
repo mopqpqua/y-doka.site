@@ -2,9 +2,8 @@
 title: "alert()"
 name: alert
 author: vindi-r
-co-authors:
-designers:
 contributors:
+  - furtivite
 summary:
   - alert
   - модальное окно
