@@ -126,24 +126,6 @@ contributors: <!-- ники всех прочих разработчиков -->
 summary: <!-- ключевые слова для работы поиска -->
   - флексбокс
   - flexbox
-  - flex-box
-  - флекс-контейнер
-  - флекс-элемент
-  - основная ось
-  - дополнительная ось
-  - justify-content
-  - align-items
-  - justify-self
-  - align-self
-  - order
-  - flex-basis
-  - flex-direction
-  - flex-wrap
-  - flex-shrink
-  - flex-grow
-  - flex
-  - flex-flow
-  - align-content
 cover:
   desktop: 'desktop.png' <!-- адрес широкой картинки для десктопной обложки -->
   mobile: 'mobile.png' <!-- адрес узкой картинки для мобильной обложки -->
