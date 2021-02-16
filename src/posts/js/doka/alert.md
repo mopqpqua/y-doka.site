@@ -8,6 +8,8 @@ summary:
   - alert
   - модальное окно
   - алерт
+cover:
+  desktop: '/assets/images/posts/js/alert/cover.png'
 ---
 
 ## Кратко
