@@ -6,6 +6,9 @@ co-authors:
 designers:
 contributors:
 summary:
+  - alert
+  - модальное окно
+  - алерт
 ---
 
 ## Кратко
