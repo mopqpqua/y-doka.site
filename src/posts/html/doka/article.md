@@ -9,6 +9,8 @@ summary:
   - статья
   - артикл
   - семантический тег
+cover:
+  desktop: '/assets/images/posts/article/cover.png'
 ---
 
 ## Кратко
