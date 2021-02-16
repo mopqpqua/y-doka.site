@@ -9,6 +9,8 @@ summary:
   - список
   - маркированный список
   - ненумерованный список
+cover:
+  desktop: '/assets/images/posts/ul/cover.png'
 ---
 
 ## Кратко
