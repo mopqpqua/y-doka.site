@@ -188,7 +188,7 @@ applicantForm.addEventListener("submit", handleFormSubmit)
 
 Если сейчас мы вызовем эту функцию, передав туда нашу форму как аргумент, то в консоли появится список всех элементов:
 
-![Представление всех элементов формы в консоли браузера](/assets/images/posts/js/deal-with-forms/01.jpg)
+![Представление всех элементов формы в консоли браузера](/assets/images/posts/js/deal-with-forms/1.jpg)
 
 Обратите внимание, что тип этого набора элементов — `HTMLFormControlsCollection`. Это не массив, нам это будет важно далее.
 
@@ -229,7 +229,7 @@ function serializeForm(formNode) {
 
 В консоли после запуска мы получим вывод по каждому из полей:
 
-![имя и значение поля в консоли браузера](/assets/images/posts/js/deal-with-forms/02.jpg)
+![имя и значение поля в консоли браузера](/assets/images/posts/js/deal-with-forms/2.jpg)
 
 Заметим, чтобы последняя строчка не имеет ни названия, ни значения. Это потому, что последний элемент, который мы проверяли, — это кнопка.
 
@@ -267,7 +267,7 @@ function serializeForm(formNode) {
 
 На выходе получится массив из объектов с `name` и `value`:
 
-![отфильтрованный список имен и значений в консоли браузера](/assets/images/posts/js/deal-with-forms/03.jpg)
+![отфильтрованный список имен и значений в консоли браузера](/assets/images/posts/js/deal-with-forms/3.jpg)
 
 ### Значения чекбоксов
 
@@ -311,7 +311,7 @@ function serializeForm(formNode) {
 
 Теперь значение поля `nasaExperience` будет `true`, если чекбокс отмечен и `false`, если пропущен.
 
-![список имен и значний полей с исправленным поле nasaExperience](/assets/images/posts/js/deal-with-forms/04.jpg)
+![список имен и значний полей с исправленным поле nasaExperience](/assets/images/posts/js/deal-with-forms/4.jpg)
 
 ### Формат данных
 
@@ -355,7 +355,7 @@ function serializeForm(formNode) {
 
 Стоит отметить, что `nasaExperience` в таком случае попадёт, лишь если чекбокс отметили. Если его не отметить, то в финальных данных он не окажется.
 
-![поведение поле nasaExperience при использовании FormData](/assets/images/posts/js/deal-with-forms/05.jpg)
+![поведение поле nasaExperience при использовании FormData](/assets/images/posts/js/deal-with-forms/5.jpg)
 
 В первом случае чекбокс был отмечен, поэтому в списке есть элемент `nasaExperience`, во втором случае чекбокс был пропущен, поэтому такого элемента в списке данных нет.
 
@@ -506,7 +506,7 @@ async function handleFormSubmit(event) {
 }
 ```
 
-![Скриншот сообщения об успешной отправке](/assets/images/posts/js/deal-with-forms/06.jpg)
+![Скриншот сообщения об успешной отправке](/assets/images/posts/js/deal-with-forms/6.jpg)
 
 При успешной отправке покажется это сообщение, а форма пропадёт.
 
@@ -546,7 +546,7 @@ async function handleFormSubmit(event) {
 }
 ```
 
-![Скриншот сообщения с ошибкой](/assets/images/posts/js/deal-with-forms/07.jpg)
+![Скриншот сообщения с ошибкой](/assets/images/posts/js/deal-with-forms/7.jpg)
 
 Если что-то пошло не так, мы увидим причину. Форма останется на месте.
 
@@ -589,7 +589,7 @@ function checkValidity(event) {
 applicantForm.addEventListener("input", checkValidity)
 ```
 
-![Скриншот заблокированной кнопки отправки](/assets/images/posts/js/deal-with-forms/08.jpg)
+![Скриншот заблокированной кнопки отправки](/assets/images/posts/js/deal-with-forms/8.jpg)
 
 Теперь, пока форма не будет заполнена, кнопка будет заблокирована.
 
@@ -597,7 +597,7 @@ applicantForm.addEventListener("input", checkValidity)
 
 Мы сделали форму, которая отправляет данные без перезагрузки страницы, показывает сообщение об ошибке или успешной отправке и блокирует кнопку, пока не введены значения.
 
-![Итоговый вид формы](/assets/images/posts/js/deal-with-forms/09.jpg)
+![Итоговый вид формы](/assets/images/posts/js/deal-with-forms/9.jpg)
 
 Для всего этого мы использовали методы HTML-элементов и элементов форм, которые нам предоставляет браузер и веб-платформа.
 
