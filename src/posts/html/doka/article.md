@@ -2,9 +2,8 @@
 title: "<article>"
 name: article
 author: Roman_Ganin
-co-authors:
-designers:
 contributors:
+  - furtivite
 summary:
   - статья
   - артикл
