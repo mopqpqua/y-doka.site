@@ -4,8 +4,8 @@ name: flexbox-guide
 author: ABatickaya
 co-authors:
   - furtivite
-designers:
-contributors: skorobaeus
+contributors:
+  - skorobaeus
 tags:
   - sprint-1
   - sprint-4
