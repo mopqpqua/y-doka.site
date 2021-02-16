@@ -2,9 +2,8 @@
 title: "Работа с формами"
 name: deal-with-forms
 author: bespoyasov
-co-authors:
-designers:
 contributors:
+  - furtivite
 tags:
   - sprint-4
 summary:
