@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 5%;
+  background-color: #282a2e;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+::selection {
+  background-color: #ed4242;
+}
+
+section {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 27px;
+}

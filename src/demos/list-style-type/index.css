@@ -5,11 +5,6 @@
   padding: 0;
 }
 
-html {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
 body {
   padding: 5%;
   background-color: #18191c;
@@ -18,16 +13,28 @@ body {
 }
 
 code {
+  padding: 0.2em 0.4em;
   background-color: #282a2e;
   color: #ed6742;
-  padding: 0.2em 0.4em;
 }
 
-ul {
+.header code {
+  display: block;
+  padding: 30px 50px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.list {
   margin-top: 30px;
   padding-left: 50px;
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.5;
+}
+
+.list__item + .list__item {
+  margin-top: 10px;
 }
 
 .list__item_active {
@@ -36,13 +43,4 @@ ul {
 
 .list__title {
   cursor: default;
-}
-
-li + li {
-  margin-top: 10px;
-}
-
-div pre code {
-  padding: 30px 50px;
-  display: block;
 }

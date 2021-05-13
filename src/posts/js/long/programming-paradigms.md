@@ -2,9 +2,6 @@
 title: "Парадигмы программирования"
 name: programming-paradigms
 author: bespoyasov
-co-authors:
-designers:
-contributors:
 tags:
   - sprint-8
 summary:
@@ -15,6 +12,8 @@ summary:
   - ооп
   - обьектно-ориентированное
   - функциональное
+cover:
+  desktop: '/assets/images/posts/programming-paradigms/cover.png'
 ---
 
 ## Кратко

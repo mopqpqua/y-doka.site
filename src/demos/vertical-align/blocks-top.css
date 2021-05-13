@@ -1,0 +1,45 @@
+body {
+  min-width: 350px;
+  margin: 0;
+  padding: 75px 0;
+  background: url("/assets/images/posts/vertical-align/background.png") #1a5ad7
+    top center;
+  text-align: center;
+}
+
+.parent {
+  display: inline-block;
+  padding: 50px;
+  background-color: #1a5ad7;
+  font-size: 0;
+  text-align: center;
+}
+
+.element {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  background-color: #ffffff;
+}
+
+.element + .element {
+  margin-left: 50px;
+}
+
+.small {
+  height: 50px;
+}
+
+.medium {
+  height: 100px;
+}
+
+.big {
+  height: 150px;
+}
+
+@media (max-width: 350px) {
+  body {
+    background-image: none;
+  }
+}

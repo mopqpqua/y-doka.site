@@ -132,7 +132,7 @@ content: unset;
 [data-tip]::after {
   content: attr(data-tip);
   position: absolute;
-  top: 100%;
+  top: 140%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -140,7 +140,7 @@ content: unset;
 }
 ```
 
-{% demo "/content/rating", "attr", 200 %}
+{% demo "/content/rating", "attr", 210 %}
 
 - Ну и конечно же разработчики спецификации позаботились о нас и сделали возможность собрать сразу несколько значений в общую строку:
 

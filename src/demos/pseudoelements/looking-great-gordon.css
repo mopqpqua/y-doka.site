@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,300&amp;display=swap");
+
+body {
+  margin: 0;
+  padding: 5%;
+  background-color: #18191c;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.username {
+  display: inline-block;
+  padding: 30px 70px;
+  border-radius: 62px;
+  background-color: #1a5ad7;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.username:before {
+  content: "Привет, ";
+}
+
+.username:after {
+  content: ", ты отлично выглядишь!";
+}

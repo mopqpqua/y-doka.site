@@ -108,7 +108,7 @@ CSS
   height: 100vh;
   background-color: #f1f1f1; /* Фоновый цвет */
   /* Маленькая фоновая картинка */
-  background-image: url("pattern.png");
+  background-image: url("pattern.svg");
   /* Нет background-repeat, а значит картинка будет повторяться по горизонтали и вертикали*/
   background-size: 40px auto; /* Размер картинки 40 пикселей по ширину и auto по высоте */
 }

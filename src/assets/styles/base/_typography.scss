@@ -92,12 +92,26 @@ pre {
 
 code {
   display: inline-block;
+  min-width: 1.86em;
+  margin: 0 .22em;
+  padding: .35em .55em;
+  border-radius: 4px;
   font-family: "Menlo", monospace;
-  font-size: inherit;
-  color: $contrast-blue;
-  padding: 0 5px;
-  border-radius: 3px;
-  background-color: $gray-light;
+  font-size: .8em;
+  line-height: 1.86;
+  color: #383a42;
+  background-color: #f7f9fc;
+  box-shadow: inset 0 0 0 1px #dfe5ee;
+  transition: box-shadow 0.2s;
+
+  a > & {
+    background-color: transparent;
+  }
+
+  a:hover > & {
+    box-shadow: inset 0 0 0 1px #1a1b22;
+    transition: none;
+  }
 }
 
 pre {
@@ -109,7 +123,10 @@ pre {
 }
 
 pre code {
+  margin: 0;
   padding: 0;
+  border: none;
+  box-shadow: none;
 }
 
 .columns {

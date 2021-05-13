@@ -10,6 +10,8 @@ tags:
 summary:
   - array
   - массивы
+cover:
+  desktop: '/assets/images/posts/js/objects-objects-everywhere/cover.png'
 ---
 
 ## Кратко

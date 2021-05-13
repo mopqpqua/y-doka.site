@@ -4,7 +4,7 @@ name: vertical-align
 author: ABatickaya
 co-authors:
 designers:
-contributors:
+contributors: skorobaeus
 summary:
   - vertical-align
 ---
@@ -34,25 +34,21 @@ CSS
 ```css
 .element {
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  border: 1px solid green;
+  width: 50px;
+  height: 50px;
+  background-color: white;
 }
 
 .medium {
-  height: 150px;
+  height: 100px;
 }
 
 .big {
-  height: 200px;
+  height: 150px;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="pBKmPP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="pBKmPP">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/pBKmPP">
-  pBKmPP</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/vertical-align/blocks-baseline", "Вертикальное выравнивание по умолчанию", 400 %}
 
 Все три блока по умолчанию выровнялись по нижней границе. Это стандартное поведение. Изменим его и выровняем элементы по верхней границе:
 
@@ -64,11 +60,7 @@ CSS
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="oOyRwm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="oOyRwm">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/oOyRwm">
-  oOyRwm</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/vertical-align/blocks-top", "Вертикальное выравнивание по верху", 400 %}
 
 ## Как это понять
 
@@ -80,78 +72,41 @@ CSS
 
 Рассмотрим доступные значения на примере с котиком 😍:
 
-- `baseline` — свойство по умолчанию. Выравниваемый элемент выстраивается по нижней линии текста. Если в родительском элементе нет текста, то элемент выравнивается по нижней границе.
+- `baseline` — значение по умолчанию. Выравниваемый элемент выстраивается по нижней линии текста. Если в родительском элементе нет текста, то элемент выравнивается по нижней границе.
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="GLGaxg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GLGaxg">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/GLGaxg">
-  GLGaxg</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
+{% demo "/vertical-align/baseline", "Вертикальное выравнивание по умолчанию", 120 %}
 
 - `top` — верхняя граница элемента находится на уровне верхней границы строки.
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="NmzVzd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NmzVzd">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/NmzVzd">
-  NmzVzd</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
+{% demo "/vertical-align/top", "Вертикальное выравнивание по верху", 120 %}
 
 - `middle` — мысленно проведи две вертикальные линии: одну через центр текста, а вторую через центр котика. Текущее значение свойства сопоставляет эти линии. Таким образом элемент выравнивается по центру.
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="eoKaKM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="eoKaKM">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/eoKaKM">
-  eoKaKM</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
+{% demo "/vertical-align/middle", "Вертикальное выравнивание по центру", 120 %}
 
 - `bottom` — выравнивает нижнюю границу элемента по уровню нижней границы строки.
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="GLGawp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GLGawp">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/GLGawp">
-  GLGawp</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
-
-  Этот пример нужно пояснить. Кажется, что лапки кота — это нижняя часть элемента. Но нет! Взгляни на него через инструменты разработчика:
-
-  ![Кот через инструменты разработчика](/assets/images/posts/vertical-align/Untitled.png)
+{% demo "/vertical-align/bottom", "Вертикальное выравнивание по низу", 120 %}
 
 - `sub` — удобное значение, если нужно создать нижний индекс. Например, в химических формулах: **H₂O**. Опускает базовую линию так, чтобы элемент опустился до уровня нижнего индекса:
 
-      <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="XQYwQx" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="XQYwQx">
-        <span>See the Pen <a href="https://codepen.io/solarrust/pen/XQYwQx">
-
-  XQYwQx</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>) on <a href="https://codepen.io">CodePen</a>.</span> </p>
-  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/vertical-align/sub", "Нижний индекс при помощи vertical-align", 120 %}
 
 - `super` — работает почти как `sub`, только поднимает базовую линию вверх.
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="vMrwwO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vMrwwO">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/vMrwwO">
-  vMrwwO</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
+{% demo "/vertical-align/super", "Верхний индекс при помощи vertical-align", 120 %}
 
 - `text-bottom` — выравнивает элемент по нижней точке текста с учётом выносных элементов.
 
-  ![Кот выравненный по нижней точке текста, с помощью значения text-bottom](/assets/images/posts/vertical-align/Untitled-1.png)
+  ![Кот, выравненный по нижней точке текста с помощью значения text-bottom](/assets/images/posts/vertical-align/text-bottom.png)
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="solarrust" data-slug-hash="wZXbbJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="wZXbbJ">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/wZXbbJ">
-  wZXbbJ</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
+{% demo "/vertical-align/text-bottom", "Вертикальное выравнивание по нижней линии текста", 100 %}
 
 - `text-top` — верхняя часть элемента выравнивается по верхнему краю родителя:
 
-  ![Кот выравненный по верхнему краю родителя, с помощью значения text-top](/assets/images/posts/vertical-align/Untitled-2.png)
+  ![Кот, выравненный по верхнему краю родителя с помощью значения text-top](/assets/images/posts/vertical-align/text-top.png)
 
-    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="solarrust" data-slug-hash="xezoZo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="xezoZo">
-      <span>See the Pen <a href="https://codepen.io/solarrust/pen/xezoZo">
-  xezoZo</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
-    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/vertical-align/text-top", "Вертикальное выравнивание по верхней линии текста", 100 %}
 
 Помимо ключевых слов можно использовать числовые значения.
 

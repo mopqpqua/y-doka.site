@@ -1,19 +1,20 @@
 ---
 title: "Promise"
 name: promise
-author:
-co-authors:
-designers:
-contributors:
 tags:
   - sprint-10
   - sprint-12
   - sprint-14
 summary:
+cover:
+  desktop: '/assets/images/posts/promise/cover.png'
 ---
 
-<div class="callout">
-  Эта документация связана с понятием асинхронности в JavaScript. Зачем нужен асинхронный код и как он работает описано в обзорной статье <a href="#">Асинхронность в JS</a></div>
+:::callout 💡
+
+Эта документация связана с понятием асинхронности в JavaScript. Зачем нужен асинхронный код и как он работает описано в обзорной статье «[Асинхронность в JS](/js/long/async-in-js/)».
+
+:::
 
 ## Кратко
 
@@ -51,7 +52,7 @@ const promise = new Promise(function (resolve, reject) {
   const data = resolve(data) // запрос в БД, API, etc. // переводим промис в состояние fulfilled и отдаем наружу результат операции
 })
 
-const errorPromise = new Promist(function (resolve, reject) {
+const errorPromise = new Promise(function (resolve, reject) {
   reject(new Error("ошибка")) // переводим промис в состояние rejected и отдаем наружу ошибку
 })
 ```

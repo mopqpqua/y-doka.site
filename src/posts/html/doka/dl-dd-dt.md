@@ -1,6 +1,6 @@
 ---
 title: "<dl>, <dd>, <dt>"
-name: article
+name: dl-dd-dt
 author: ezhkov_d
 co-authors:
 designers:

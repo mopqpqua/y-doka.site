@@ -2,14 +2,13 @@
 title: "Debounce на примере формы поиска"
 name: debounce
 author: bespoyasov
-co-authors:
-designers:
-contributors:
 summary:
   - keyboard event
   - delay
   - search
   - form
+cover:
+  desktop: '/assets/images/posts/js/debounce/cover.png'
 ---
 
 ## Кратко

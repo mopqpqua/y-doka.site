@@ -2,4 +2,43 @@
   {% include './pattern.css' %}
 </style>
 
-<div class="element"></div>
+<div class="element js-demo">
+  <div class="controls">
+    <ul class="list">
+      <li class="list__item">
+        <input class="radio-input js-b-size" id="1" type="radio" name="size" value="1">
+        <label class="radio-label" for="1">
+          <code class="radio-code">background-size: 1px;</code>
+        </label>
+      </li>
+      <li class="list__item">
+        <input class="radio-input js-b-size" id="40" type="radio" name="size" value="40" checked>
+        <label class="radio-label" for="40">
+          <code class="radio-code">background-size: 40px;</code>
+        </label>
+      </li>
+      <li class="list__item">
+        <input class="radio-input js-b-size" id="100" type="radio" name="size" value="100">
+        <label class="radio-label" for="100">
+          <code class="radio-code">background-size: 100px;</code>
+        </label>
+      </li>
+      <li class="list__item">
+        <input class="radio-input js-b-size" id="200" type="radio" name="size" value="200">
+        <label class="radio-label" for="200">
+          <code class="radio-code">background-size: 200px;</code>
+        </label>
+      </li>
+      <li class="list__item">
+        <input class="radio-input js-b-size" id="500" type="radio" name="size" value="500">
+        <label class="radio-label" for="500">
+          <code class="radio-code">background-size: 500px;</code>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  {% include './pattern.js' %}
+</script>

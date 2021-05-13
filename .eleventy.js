@@ -10,6 +10,7 @@ const transforms = require("./utils/transforms.js")
 const shortcodes = require("./utils/shortcodes.js")
 const iconsprite = require("./utils/iconsprite.js")
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages')
 
 const callout = require("./utils/markdown/callout")
 
@@ -19,6 +20,9 @@ module.exports = function (config) {
   config.addPlugin(pluginNavigation)
   config.addPlugin(syntaxHighlight)
   config.addPlugin(eleventyNavigationPlugin)
+  config.addPlugin(lazyImagesPlugin , {
+    imgSelector: '.article img'
+  })
 
   // Filters
   Object.keys(filters).forEach((filterName) => {

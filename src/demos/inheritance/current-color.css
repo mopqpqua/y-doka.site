@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&amp;display=swap");
+
+body {
+  margin: 0;
+  padding: 5%;
+  background-color: #18191c;
+  text-align: center;
+}
+
+.magic-btn {
+  padding: 12px 20px;
+  border: 1px solid;
+  border-color: currentColor;
+  color: #f498ad;
+  background-color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.magic-btn:hover {
+  color: #49a16c;
+  opacity: 0.99; /* это нужно для Safari, там баг */
+}

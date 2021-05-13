@@ -4,7 +4,7 @@ name: inheritance
 author: Roman_Ganin
 co-authors:
 designers:
-contributors:
+contributors: skorobaeus
 summary:
   - наследование
 ---
@@ -37,19 +37,35 @@ summary:
 
 Например, в отличие от `color`, ненаследуемое свойство `border` не будет применено к вложенным элементам:
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="Realetive" data-slug-hash="pobKOjo" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="inherit color">
-  <span>See the Pen <a href="https://codepen.io/Realetive/pen/pobKOjo">
-  inherit color</a> by Roman Ganin (<a href="https://codepen.io/Realetive">@Realetive</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+```html
+<h1>
+  <span>You</span>
+  <span>Shall not</span>
+  <span>Pass</span>
+</h1>
+```
 
-Но если мы укажем у `<p>` свойство `border` как `inherit` (т. е. наследуемое):
+```css
+h1 {
+  border: 1px solid #ED6742;
+  color: #ED6742;
+}
+span {
+  display: block;
+}
+```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="Realetive" data-slug-hash="eYzKLJZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="inherit border">
-  <span>See the Pen <a href="https://codepen.io/Realetive/pen/eYzKLJZ">
-  inherit border</a> by Roman Ganin (<a href="https://codepen.io/Realetive">@Realetive</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/inheritance/color-inherit", "Наследование цвета", 230 %}
+
+Но если мы укажем у `<span>` свойство `border` как `inherit` (т. е. наследуемое):
+
+```css
+span {
+  border: inherit;
+}
+```
+
+{% demo "/inheritance/border-inherit", "Наследование рамки", 260 %}
 
 ## Подсказки
 
@@ -68,11 +84,11 @@ summary:
 🛠 Удобно делать всякие трюки, используя `currentColor`. Мы не меняем явно цвет бордера по наведению курсора, но он меняется вслед за `color`.
 
 ```html
-<button class="magick-btn">Волшебная кнопка</button>
+<button class="magic-btn">Волшебная кнопка</button>
 ```
 
 ```css
-.magick-btn {
+.magic-btn {
   padding: 15px;
   color: pink;
   border: 1px solid;
@@ -82,16 +98,12 @@ summary:
   transition: all 0.2s;
 }
 
-.magick-btn:hover {
-  color: darkblue;
+.magic-btn:hover {
+  color: green;
+  opacity: 0.99; /* это нужно для Safari, там баг */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="MWeBpma" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWeBpma">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/MWeBpma">
-  MWeBpma</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/inheritance/current-color", "currentColor", 140 %}
 
 {% include "authors/Roman_Ganin/author.njk" %}

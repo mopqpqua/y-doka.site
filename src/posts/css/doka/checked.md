@@ -103,12 +103,14 @@ CSS
 .dropdown ul {
   position: absolute; /* Абсолютное позиционирование */
   left: 0;
-  top: 1.4em; /* Положение меню */
+  top: 140%; /* Положение меню */
   margin: 0;
-  padding: 5px; /* Убираем отступы и поля */
+  padding: 17px; /* Отступы и поля */
+  border: 1px solid #1A5AD7;
+  box-shadow: 5px 5px 0px #1A5AD7;
+  background: #18191C; /* Цвет фона */
+  font-size: 1rem;
   list-style: none; /* Убираем маркеры списка */
-  background: #1a5ad7; /* Цвет фона */
-  font-size: 20px;
 }
 
 .dropdown a {
@@ -120,6 +122,6 @@ CSS
 }
 ```
 
-{% demo "/checked/choose", "Выпадающее меню", 230 %}
+{% demo "/checked/dropdown-menu", "Выпадающее меню", 240 %}
 
 {% include "authors/ABatickaya/author.njk" %}

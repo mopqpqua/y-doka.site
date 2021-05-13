@@ -7,13 +7,18 @@ module.exports = {
                     <use xlink:href="#icon-${name}"></use>
                 </svg>`
   },
-  demo: function (demoName, title = "", height = 400) {
+  demo: function (demoName, title = "", height = 400, options = {}) {
+    const { stretchVertically = true } = options
+    const onLoad =
+      stretchVertically &&
+      "this.style.height = this.contentWindow.document.body.scrollHeight + 'px'"
+
     return outdent`
       <iframe
         src="${path.join("/demos", demoName)}"
         title="${title}"
         height="${height}"
-        onload="this.style.height = this.contentWindow.document.body.scrollHeight + 'px'"
+        onload="${onLoad}"
         loading="lazy">
       </iframe>
     `

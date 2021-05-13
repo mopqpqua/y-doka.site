@@ -10,6 +10,8 @@ summary:
   - resize
   - lazy
   - прокрутка
+cover:
+  desktop: '/assets/images/posts/js/throttle/cover.png'
 ---
 
 ## Кратко
@@ -26,7 +28,9 @@ summary:
 
 :::
 
-![диаграмма работы throttle](/assets/images/posts/js/throttle/throttle-diagram.png)
+<video controls width="580" poster="/assets/images/posts/js/throttle/poster.png">
+  <source src="/assets/video/posts/throttle/1.mp4" type="video/mp4">
+</video>
 
 ## Дизайн и задача
 

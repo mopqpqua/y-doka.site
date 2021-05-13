@@ -4,7 +4,9 @@ name: pseudoelements
 author: ABatickaya
 co-authors:
 designers:
-contributors: furtivite
+contributors:
+  - furtivite
+  - skorobaeus
 tags:
   - sprint-1
 summary:
@@ -24,30 +26,26 @@ summary:
 
 ```html
 <header class="header">
-  <h1 class="header__title">Самый лучший сайт!</h1>
+  <h1 class="header__title">Good evening, Clarice.</h1>
 </header>
 ```
 
 ```css
 .header {
-  background: #999
-    url("https://cdn.pixabay.com/photo/2019/05/26/03/41/background-4229527_960_720.jpg")
+  background: #999999
+    url("background.svg")
     no-repeat center / cover;
 }
 
 .header__title {
-  color: #fff;
+  color: #ffffff;
   font-size: 82px;
   text-transform: uppercase;
   text-align: center;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="QRoLde" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="QRoLde">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/QRoLde">
-  QRoLde</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/header", "Шапка сайта", 500 %}
 
 Чтобы цвет картинки был не таким ярким и текст лучше читался наложим поверх всего `header` полупрозрачную заливку чёрного цвета.
 
@@ -66,18 +64,14 @@ summary:
   /* Растягиваем на всю ширину и высоту */
   width: 100%;
   height: 100%;
-  background-color: rgba(0 0 0 / 0.5); /* Задаём полупрозрачный чёрный фон */
+  background-color: rgba(0 0 0 / 0.7); /* Задаём полупрозрачный чёрный фон */
   z-index: -1; /* Убираем под текст */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="vwPBpa" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vwPBpa">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/vwPBpa">
-  vwPBpa</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/header-veil", "Шапка сайта с вуалью", 500 %}
 
-Не трогая HTML-разметку, мы добавили ещё один элемент в декоративных целях. Разметка осталась чистой. Псевдоэлементов легко управлять, добавлять или удалять его по необходимости, даже если нет доступа к HTML.
+Не трогая HTML-разметку, мы добавили ещё один элемент в декоративных целях. Разметка осталась чистой. Псевдоэлементом легко управлять, добавлять или удалять его по необходимости, даже если нет доступа к HTML.
 
 ## Как это понять
 
@@ -101,7 +95,7 @@ summary:
 <span class="username">Гордон</span>
 ```
 
-Поприветствуем пользователя и скажем ему комплемент:
+Поприветствуем пользователя и скажем ему комплимент:
 
 ```css
 .username:before {
@@ -113,11 +107,7 @@ summary:
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="solarrust" data-slug-hash="OYqJrb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="OYqJrb">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/OYqJrb">
-  OYqJrb</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/looking-great-gordon", "Текст в псевдоэлементах before и after", 175 %}
 
 Как видно в примере, текст из свойства `content` псевдоэлемента `before` встал перед именем пользователя, а из псевдоэлемента `after` — после.
 
@@ -139,60 +129,51 @@ summary:
   display: block; /* Делаем псевдоэлемент блочным */
   width: 100%;
   height: 2px;
-  background-color: red;
+  background-color: #F498AD;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="solarrust" data-slug-hash="PvLoMW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PvLoMW">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/PvLoMW">
-  PvLoMW</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/greetings-gordon", "Декоративная линия из псевдоэлемента", 175 %}
 
 ### `:first-letter`
 
-При помощи этого псевдоэлемента можно выбрать первую букву в строке или абзаце текста. Это позволяет создать так называемую _буквицу —_ большую декоративную букву в начале текста*.*
+При помощи этого псевдоэлемента можно выбрать первую букву в строке или абзаце текста. Это позволяет создать так называемую _буквицу_ — большую декоративную букву в начале текста.
 
 ```html
-<p class="text">Прекрасное, следовательно, представляет собой символизм...</p>
+<p class="text">
+  В траве, около высоких муравейников...
+</p>
 ```
 
 ```css
 .text:first-letter {
-  font-size: 64px; /* Увеличиваем размер первой буквы */
-  color: red; /* и красим в красный цвет */
+  font-size: 52px; /* Увеличиваем размер первой буквы */
+  color: #ed4242; /* и красим её в красный цвет */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="dErPEW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="dErPEW">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/dErPEW">
-  dErPEW</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+
+{% demo "/pseudoelements/first-letter", "first-letter, буквица", 220 %}
 
 ### `:first-line`
 
 Этот псевдоэлемент выбирает первую строку текста. Обрати внимание, что он сработает только для блочных элементов. Со строчными этот трюк не пройдёт.
 
-Например, можно сделать «красную строку» как учили в школе =)
+Например, можно сделать «красную строку», правда, не так, как учили в школе =)
 
 ```html
 <p class="text">
-  Героическое готично представляет собой персональный эдипов...
+  В далекой и бледной глубине неба...
 </p>
 ```
 
 ```css
 .text:first-line {
-  color: red;
+  background-color: #ed4242; /* Красим первую строку в красный */
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="RmdPVJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="RmdPVJ">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/RmdPVJ">
-  RmdPVJ</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/first-line", "first-line, красная строка", 170 %}
 
 ### `::selection`
 
@@ -208,21 +189,17 @@ summary:
 
 ```css
 ::selection {
-  background-color: rgba(255 219 77 / 0.5);
+  background-color: #ed4242;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="ZNPONj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZNPONj">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/ZNPONj">
-  ZNPONj</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/selection", "selection, выделение текста", 120 %}
 
-Если выделить текст в этом примере, то станет видно, что фон выделения будет полупрозрачного жёлтого цвета.
+Если выделить текст в этом примере, то станет видно, что фон выделения будет ярко-красного цвета.
 
 ### `::placeholder`
 
-Этот псевдоэлемент так же должен писаться с двумя двоеточиями.
+Этот псевдоэлемент также должен писаться с двумя двоеточиями.
 
 Этот псевдоэлемент позволяет стилизовать текст, выводимый в поле ввода текста (`input`) в виде подсказки.
 
@@ -236,19 +213,15 @@ summary:
 
 По-умолчанию цвет текста подсказки серый. Но иногда по дизайну требуется другой цвет.
 
-Используйте псевдоэлемент `::placeholder` и задайте нужные стили для подсказки. Можно изменить всё в плоть до шрифта. При этом стили текста, который будет вводить пользователь, не будут затронуты.
+Используйте псевдоэлемент `::placeholder` и задайте нужные стили для подсказки. Можно изменить всё, вплоть до шрифта. При этом стили текста, который будет вводить пользователь, не будут затронуты.
 
 ```css
 input::placeholder {
-  color: rgba(255 0 0 / 0.4);
+  color: #70a0ff;
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="css,result" data-user="solarrust" data-slug-hash="PvLGNp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="PvLGNp">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/PvLGNp">
-  PvLGNp</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
+{% demo "/pseudoelements/placeholder", "Placeholder, подсказка", 190 %}
 
 ## Подсказки
 
@@ -307,12 +280,7 @@ input::placeholder {
 }
 ```
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="solarrust" data-slug-hash="LoaRrN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="LoaRrN">
-  <span>See the Pen <a href="https://codepen.io/solarrust/pen/LoaRrN">
-  LoaRrN</a> by Alena (<a href="https://codepen.io/solarrust">@solarrust</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+{% demo "/pseudoelements/custom-markers", "Кастомизация маркеров", 370 %}
 
 Подобным образом можно менять стили маркеров так, как заблагорассудится.
 

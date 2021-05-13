@@ -10,6 +10,8 @@ summary:
   - loading
   - lazy
   - event
+cover:
+  desktop: '/assets/images/posts/js/infinite-scroll/cover.png'
 ---
 
 ## Кратко

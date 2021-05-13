@@ -1,139 +1,52 @@
-"use strict"
-
-const types = [
-  {
-    type: "circle",
-    title: "маркер в виде кружка",
-  },
-  {
-    type: "disc",
-    title: "маркер в виде точки",
-  },
-  {
-    type: "square",
-    title: "маркер в виде квадрата",
-  },
-  {
-    type: "armenian",
-    title: "традиционная армянская нумерация",
-  },
-  {
-    type: "decimal",
-    title: "арабские числа (1, 2, 3, 4, …)",
-  },
-  {
-    type: "decimal-leading-zero",
-    title:
-      "арабские числа с нулем впереди для цифр меньше десяти (01, 02, 03,…)",
-  },
-  {
-    type: "georgian",
-    title: "традиционная грузинская нумерация",
-  },
-  {
-    type: "lower-greek",
-    title: "строчные греческие буквы (α, β, γ, δ, …)",
-  },
-  {
-    type: "lower-alpha",
-    title: "строчные латинские буквы (a, b, c, d, …)",
-  },
-  {
-    type: "lower-latin",
-    title: "это значение аналогично lower-alpha",
-  },
-  {
-    type: "upper-alpha",
-    title: "заглавные латинские буквы (A, B, C, D, …)",
-  },
-  {
-    type: "upper-latin",
-    title: "это значение аналогично upper-alpha",
-  },
-  {
-    type: "lower-roman",
-    title: "римские числа в нижнем регистре (i, ii, iii, iv, v, …)",
-  },
-  {
-    type: "upper-roman",
-    title: "римские числа в верхнем регистре (I, II, III, IV, …)",
-  },
-  {
-    type: "disclosure-open",
-    title: "открытый тогглер",
-  },
-  {
-    type: "disclosure-closed",
-    title: "закрытый тогглер",
-  },
-  {
-    type: "none",
-    title: "отменяет маркеры для списка",
-  },
-  {
-    type: '"🔥"',
-    title:
-      "кастомный маркер — можно задать любой символ или текст (в кавычках)",
-  },
-]
-
-const List = () => {
-  const [index, setIndex] = React.useState(0)
-  const [paused, setPaused] = React.useState(false)
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      if (!paused) setIndex((i) => (++i < types.length ? i : 0))
-    }, 1200)
-    return () => clearInterval(interval)
-  }, [paused])
-  return /*#__PURE__*/ React.createElement(
-    "div",
-    {
-      onMouseEnter: () => setPaused(true),
-      onMouseLeave: () => setPaused(false),
-    },
-    /*#__PURE__*/ React.createElement(
-      "pre",
-      null,
-      /*#__PURE__*/ React.createElement(
-        "code",
-        null,
-        "ul ",
-        `{ list-style-type: ${types[index].type} }`
-      )
-    ),
-    /*#__PURE__*/ React.createElement(
-      "ul",
-      {
-        class: "list",
-        style: {
-          listStyleType: types[index].type,
-        },
-      },
-      types.map(({ type, title }, i) =>
-        /*#__PURE__*/ React.createElement(
-          "li",
-          {
-            className: `list__item ${i === index && " list__item_active"}`,
-            onMouseEnter: () => setIndex(i),
-          },
-          /*#__PURE__*/ React.createElement("code", null, type),
-          " ",
-          /*#__PURE__*/ React.createElement(
-            "span",
-            {
-              className: "list__title",
-            },
-            title
-          ),
-          ";"
-        )
-      )
-    )
-  )
+const SELECTORS = {
+  list: ".list",
+  listItems: ".list__item",
+  headerCode: ".header code",
 }
 
-ReactDOM.render(
-  /*#__PURE__*/ React.createElement(List, null),
-  document.getElementById("root")
+const list = document.querySelector(SELECTORS.list)
+const listItems = Array.from(document.querySelectorAll(SELECTORS.listItems))
+const headerCode = document.querySelector(SELECTORS.headerCode)
+
+listItems.forEach((listItem) =>
+  listItem.addEventListener("mouseover", () => {
+    list.classList.add("paused")
+    changeListType(listItem)
+  })
 )
+
+list.addEventListener("mouseleave", () => list.classList.remove("paused"))
+
+function cycle() {
+  if (list.classList.contains("paused")) return
+  let index = listItems.findIndex((listItem) =>
+    listItem.classList.contains("list__item_active")
+  )
+  if (index != -1) {
+    listItems[index].classList.remove("list__item_active")
+    listItems[index].classList.add("list__item_inactive")
+    const nextItem = listItems[index + 1] || listItems[0]
+    changeListType(nextItem)
+  }
+}
+
+function changeListType(item) {
+  const listType = item.dataset.type
+  headerCode.innerHTML = `ul { list-style-type: ${listType} }`
+  list.style.listStyleType = listType
+  listItems.forEach((listItem) =>
+    listItem.classList.remove("list__item_active")
+  )
+  item.classList.add("list__item_active")
+}
+
+let timerId
+const observer = new IntersectionObserver((entries) => {
+  if (entries[0].intersectionRatio > 0) {
+    timerId = setInterval(cycle, 1200)
+  } else {
+    clearInterval(timerId)
+  }
+})
+const target = document.querySelector("body")
+observer.observe(target)

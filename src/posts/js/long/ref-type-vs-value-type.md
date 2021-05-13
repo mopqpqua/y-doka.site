@@ -6,6 +6,10 @@ co-authors:
 designers:
 contributors:
 summary:
+  - reference
+  - value
+cover:
+  desktop: '/assets/images/posts/ref-type-vs-value-type/cover.png'
 ---
 
 ## Кратко

@@ -7,6 +7,8 @@ designers:
 contributors:
 summary:
   - выравнивание флекс-элемента
+  - выравнивание грид-элемента
+  - grid
   - flexbox
 ---
 

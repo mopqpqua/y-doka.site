@@ -13,6 +13,8 @@ summary:
   - frontend фронтенд
   - клиент сервер
   - model view controller mvc
+cover:
+  desktop: '/assets/images/posts/js/web-app-works/cover.png'
 ---
 
 ## Кратко

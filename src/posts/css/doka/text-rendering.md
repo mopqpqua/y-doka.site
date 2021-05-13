@@ -2,9 +2,6 @@
 title: "text-rendering"
 name: text-rendering
 author: ezhkov_d
-co-authors:
-designers:
-contributors:
 summary:
   - render
   - рендер
@@ -38,14 +35,14 @@ summary:
 Рендеринг текста — это процесс отрисовки символов шрифта в пиксельной сетке. При этом для обеспечения более естественного вида текста браузер может выполнять дополнительные вычисления и модификации символов: изменять **кернинг** (межсимвольное расстояние), объединять пары и даже тройки символов в **лигатуры**.
 
 <figure>
-  <img src="/assets/images/posts/text-rendering/kerning.png" width="260" height="247" alt="Пример кернинговых пар">
+  <img src="/assets/images/posts/text-rendering/kerning.png" alt="Пример кернинговых пар" width="900" height="471">
   <figcaption>
     Яркий пример кернинговой пары — сочетание символов <strong>AV</strong> или <strong>VA</strong>.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="/assets/images/posts/text-rendering/ligatures.png" width="500" height="463" alt="Пример лигатур">
+  <img src="/assets/images/posts/text-rendering/ligatures.png" alt="Пример лигатур" width="900" height="493">
   <figcaption>
     Яркий пример кернинговой пары — сочетание символов <strong>fi</strong>, <strong>fl</strong>, <strong>at</strong>.
   </figcaption>

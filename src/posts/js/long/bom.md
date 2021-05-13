@@ -2,9 +2,6 @@
 title: "Браузерное окружение, BOM"
 name: bom
 author: bespoyasov
-co-authors:
-designers:
-contributors:
 summary:
   - navigator
   - screen
@@ -12,6 +9,8 @@ summary:
   - history
   - fetch
   - localstorage
+cover:
+  desktop: '/assets/images/posts/js/bom/cover.png'
 ---
 
 ## Кратко

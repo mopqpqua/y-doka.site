@@ -2,13 +2,14 @@
 title: "<article>"
 name: article
 author: Roman_Ganin
-co-authors:
-designers:
 contributors:
+  - furtivite
 summary:
   - статья
   - артикл
   - семантический тег
+cover:
+  desktop: '/assets/images/posts/article/cover.png'
 ---
 
 ## Кратко

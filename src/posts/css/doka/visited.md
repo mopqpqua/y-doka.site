@@ -2,9 +2,8 @@
 title: ":visited"
 name: visited
 author: ABatickaya
-co-authors:
-designers:
 contributors:
+  - furtivite
 summary:
   - :visited
   - псевдокласс

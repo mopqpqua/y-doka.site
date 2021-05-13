@@ -28,13 +28,15 @@ body {
 [data-tip]::after {
   content: attr(data-tip);
   position: absolute;
-  top: 100%;
+  top: 140%;
   left: 50%;
   transform: translateX(-50%);
+  border: 1px solid #1a5ad7;
   padding: 10px 15px;
-  background-color: #1a5ad7;
+  background-color: #18191c;
+  box-shadow: 5px 5px 0px #1a5ad7;
+  font-size: 0.8em;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
-  font-size: 0.8em;
 }

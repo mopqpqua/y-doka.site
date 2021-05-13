@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  margin: 0;
+  padding: 5%;
+  background-color: #18191c;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+}
+
+.dropdown {
+  position: relative; /* Относительное позиционирование */
+}
+
+.dropdown input,
+.dropdown ul {
+  display: none; /* Прячем */
+}
+
+.dropdown label {
+  cursor: pointer; /* Вид курсора */
+  border-bottom: 3px solid #1a5ad7; /* Подчеркивание снизу */
+}
+
+.dropdown ul {
+  position: absolute; /* Абсолютное позиционирование */
+  left: 0;
+  top: 140%; /* Положение меню */
+  margin: 0;
+  padding: 17px; /* Отступы и поля */
+  border: 1px solid #1a5ad7;
+  box-shadow: 5px 5px 0px #1a5ad7;
+  background: #18191c; /* Цвет фона */
+  font-size: 1rem;
+  list-style: none; /* Убираем маркеры списка */
+}
+
+.dropdown a {
+  color: #fff; /* Цвет ссылок */
+}
+
+.dropdown :checked ~ ul {
+  display: inline-block; /* Показываем меню */
+}
+
+.dropdown li + li {
+  margin-top: 5px;
+}

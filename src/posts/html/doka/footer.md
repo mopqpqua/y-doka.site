@@ -11,6 +11,8 @@ summary:
   - <footer>
   - footer
   - футер
+cover:
+  desktop: '/assets/images/posts/footer/cover.png'
 ---
 
 ## Кратко

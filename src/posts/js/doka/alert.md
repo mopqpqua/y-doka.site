@@ -2,10 +2,14 @@
 title: "alert()"
 name: alert
 author: vindi-r
-co-authors:
-designers:
 contributors:
+  - furtivite
 summary:
+  - alert
+  - модальное окно
+  - алерт
+cover:
+  desktop: '/assets/images/posts/js/alert/cover.png'
 ---
 
 ## Кратко

@@ -2,10 +2,8 @@
 title: "Преобразование типов"
 name: typecasting
 author: bespoyasov
-co-authors:
-designers:
-contributors:
-summary:
+cover:
+  desktop: '/assets/images/posts/typecasting/cover.png'
 ---
 
 ## Кратко

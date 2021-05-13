@@ -12,6 +12,8 @@ summary:
   - javascript
   - ecmascript
   - es
+cover:
+  desktop: '/assets/images/posts/js/language-versions/cover.png'
 ---
 
 ## Кратко

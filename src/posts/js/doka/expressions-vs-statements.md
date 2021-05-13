@@ -1,6 +1,6 @@
 ---
 title: Выражения и инструкции
-name: exressions-vs-statements
+name: expressions-vs-statements
 author: windrushfarer
 co-authors:
 designers:

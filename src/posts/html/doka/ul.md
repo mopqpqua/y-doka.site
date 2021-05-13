@@ -2,13 +2,16 @@
 title: "<ul>"
 name: ul
 author: ezhkov_d
-co-authors:
-designers:
 contributors:
+  - furtivite
 summary:
   - список
   - маркированный список
   - ненумерованный список
+  - ul
+  - <ul>
+cover:
+  desktop: '/assets/images/posts/ul/cover.png'
 ---
 
 ## Кратко

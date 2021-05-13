@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 5% 5% 1px;
+  background-color: #282a2e;
+  font-family: serif;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.chapter {
+  width: 100%;
+  max-width: 800px;
+  min-width: 500px;
+  margin: auto;
+  padding: 80px 60px;
+  background-color: #ffffff;
+}
+
+.chapter__title {
+  border-bottom: 1px solid #000000;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.list {
+  list-style-type: none;
+  counter-reset: new-counter;
+}
+
+.list__item {
+  counter-increment: new-counter;
+}
+
+.list__item::before {
+  content: counter(new-counter) ") ";
+  counter-increment: my-counter;
+}

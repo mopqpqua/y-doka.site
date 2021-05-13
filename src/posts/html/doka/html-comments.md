@@ -2,11 +2,10 @@
 title: "Комментарии в HTML"
 name: html-comments
 author: ABatickaya
-co-authors:
-designers:
-contributors:
 summary:
   - комментарии
+cover:
+  desktop: '/assets/images/posts/html-comments/cover.png'
 ---
 
 ## Кратко
